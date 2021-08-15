@@ -15,6 +15,8 @@
 		AD20827B26C70CF600FCC648 /* Study_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20827A26C70CF600FCC648 /* Study_HelperUITests.swift */; };
 		AD20828B26C7120000FCC648 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20828A26C7120000FCC648 /* Course.swift */; };
 		AD20828D26C7140D00FCC648 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20828C26C7140D00FCC648 /* Event.swift */; };
+		AD258DEC26C8A56300FE58B5 /* StudyHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD258DEA26C8A56300FE58B5 /* StudyHelper.xcdatamodeld */; };
+		AD258E2A26C8A7DD00FE58B5 /* Persitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD258E2926C8A7DD00FE58B5 /* Persitence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AD20827C26C70CF600FCC648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD20828A26C7120000FCC648 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		AD20828C26C7140D00FCC648 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AD258DEB26C8A56300FE58B5 /* StudyHelperModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyHelperModel.xcdatamodel; sourceTree = "<group>"; };
+		AD258E2926C8A7DD00FE58B5 /* Persitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persitence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,12 @@
 			children = (
 				AD20828926C711E000FCC648 /* Models */,
 				AD20825D26C70CF500FCC648 /* Study_HelperApp.swift */,
+				AD258DEA26C8A56300FE58B5 /* StudyHelper.xcdatamodeld */,
 				AD20825F26C70CF500FCC648 /* ContentView.swift */,
 				AD20826126C70CF600FCC648 /* Assets.xcassets */,
 				AD20826626C70CF600FCC648 /* Info.plist */,
 				AD20826326C70CF600FCC648 /* Preview Content */,
+				AD258E2926C8A7DD00FE58B5 /* Persitence.swift */,
 			);
 			path = "Study Helper";
 			sourceTree = "<group>";
@@ -275,8 +281,10 @@
 			files = (
 				AD20828D26C7140D00FCC648 /* Event.swift in Sources */,
 				AD20828B26C7120000FCC648 /* Course.swift in Sources */,
+				AD258DEC26C8A56300FE58B5 /* StudyHelper.xcdatamodeld in Sources */,
 				AD20826026C70CF500FCC648 /* ContentView.swift in Sources */,
 				AD20825E26C70CF500FCC648 /* Study_HelperApp.swift in Sources */,
+				AD258E2A26C8A7DD00FE58B5 /* Persitence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +598,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD258DEA26C8A56300FE58B5 /* StudyHelper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD258DEB26C8A56300FE58B5 /* StudyHelperModel.xcdatamodel */,
+			);
+			currentVersion = AD258DEB26C8A56300FE58B5 /* StudyHelperModel.xcdatamodel */;
+			path = StudyHelper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AD20825226C70CF500FCC648 /* Project object */;
 }
