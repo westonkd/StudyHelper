@@ -15,8 +15,14 @@
 		AD20827B26C70CF600FCC648 /* Study_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20827A26C70CF600FCC648 /* Study_HelperUITests.swift */; };
 		AD258DEC26C8A56300FE58B5 /* StudyHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD258DEA26C8A56300FE58B5 /* StudyHelper.xcdatamodeld */; };
 		AD258E2A26C8A7DD00FE58B5 /* Persitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD258E2926C8A7DD00FE58B5 /* Persitence.swift */; };
-		AD258E2D26C8AEC400FE58B5 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD258E2B26C8AEC400FE58B5 /* Course+CoreDataClass.swift */; };
-		AD258E3126C8AFB400FE58B5 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD258E2F26C8AFB400FE58B5 /* Event+CoreDataClass.swift */; };
+		AD38C30C26C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38C30826C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift */; };
+		AD38C30E26C8DA7D00A7CA12 /* CDCourse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38C30A26C8DA7D00A7CA12 /* CDCourse+CoreDataClass.swift */; };
+		AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38C31026C8DAA100A7CA12 /* Event.swift */; };
+		ADC8DB4226C8D8CE00472EC9 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8DB4126C8D8CE00472EC9 /* Course.swift */; };
+		ADD4590926CA1250008FF305 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590826CA1250008FF305 /* DataStore.swift */; };
+		ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590A26CA1307008FF305 /* CDDataStore.swift */; };
+		ADD4590E26CA1A66008FF305 /* CDCourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */; };
+		ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590F26CA1CB2008FF305 /* Domainable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +57,14 @@
 		AD20827C26C70CF600FCC648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD258DEB26C8A56300FE58B5 /* StudyHelperModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyHelperModel.xcdatamodel; sourceTree = "<group>"; };
 		AD258E2926C8A7DD00FE58B5 /* Persitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persitence.swift; sourceTree = "<group>"; };
-		AD258E2B26C8AEC400FE58B5 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD258E2F26C8AFB400FE58B5 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD38C30826C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD38C30A26C8DA7D00A7CA12 /* CDCourse+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDCourse+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD38C31026C8DAA100A7CA12 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		ADC8DB4126C8D8CE00472EC9 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		ADD4590826CA1250008FF305 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		ADD4590A26CA1307008FF305 /* CDDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataStore.swift; sourceTree = "<group>"; };
+		ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCourseStore.swift; sourceTree = "<group>"; };
+		ADD4590F26CA1CB2008FF305 /* Domainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domainable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 		AD20825C26C70CF500FCC648 /* Study Helper */ = {
 			isa = PBXGroup;
 			children = (
+				ADD4590C26CA193B008FF305 /* Stores */,
 				AD20828926C711E000FCC648 /* Models */,
 				AD20825D26C70CF500FCC648 /* Study_HelperApp.swift */,
 				AD258DEA26C8A56300FE58B5 /* StudyHelper.xcdatamodeld */,
@@ -144,10 +157,39 @@
 		AD20828926C711E000FCC648 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AD258E2F26C8AFB400FE58B5 /* Event+CoreDataClass.swift */,
-				AD258E2B26C8AEC400FE58B5 /* Course+CoreDataClass.swift */,
+				ADD4590726CA1171008FF305 /* Domain */,
+				ADC8DB3026C8D7A800472EC9 /* CoreData */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ADC8DB3026C8D7A800472EC9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AD38C30826C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift */,
+				AD38C30A26C8DA7D00A7CA12 /* CDCourse+CoreDataClass.swift */,
+				ADD4590F26CA1CB2008FF305 /* Domainable.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ADD4590726CA1171008FF305 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ADC8DB4126C8D8CE00472EC9 /* Course.swift */,
+				AD38C31026C8DAA100A7CA12 /* Event.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		ADD4590C26CA193B008FF305 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				ADD4590826CA1250008FF305 /* DataStore.swift */,
+				ADD4590A26CA1307008FF305 /* CDDataStore.swift */,
+				ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,12 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD258E2D26C8AEC400FE58B5 /* Course+CoreDataClass.swift in Sources */,
+				ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */,
+				ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */,
+				AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */,
+				ADC8DB4226C8D8CE00472EC9 /* Course.swift in Sources */,
+				AD38C30C26C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift in Sources */,
+				AD38C30E26C8DA7D00A7CA12 /* CDCourse+CoreDataClass.swift in Sources */,
 				AD258DEC26C8A56300FE58B5 /* StudyHelper.xcdatamodeld in Sources */,
 				AD20826026C70CF500FCC648 /* ContentView.swift in Sources */,
 				AD20825E26C70CF500FCC648 /* Study_HelperApp.swift in Sources */,
-				AD258E3126C8AFB400FE58B5 /* Event+CoreDataClass.swift in Sources */,
+				ADD4590926CA1250008FF305 /* DataStore.swift in Sources */,
 				AD258E2A26C8A7DD00FE58B5 /* Persitence.swift in Sources */,
+				ADD4590E26CA1A66008FF305 /* CDCourseStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
