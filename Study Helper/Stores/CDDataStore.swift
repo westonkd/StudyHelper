@@ -14,7 +14,7 @@ enum CDError: Error {
     case invalidManagedObjectType
 }
 
-
+/// Concrete DataStore implementation for CoreData
 class CDDataStore<T: NSManagedObject>: DataStore {
     typealias Entity = T
     
@@ -24,10 +24,14 @@ class CDDataStore<T: NSManagedObject>: DataStore {
         self.context = context
     }
     
-    func get() -> Result<[Entity], Error> {
+    func get(predicate: Predicate? = nil, sortDescriptor: SortDescriptor? = nil) -> Result<[Entity], Error> {
         let fetchRequest = Entity.fetchRequest()
         
-        // TODO: allow setting predicates and sort descripors
+        if let pred = predicate {
+            fetchRequest.predicate = pred.toNSPredicate()
+        }
+        
+        // TODO allow setting sort descriptors
         
         do {
             if let result = try context.fetch(fetchRequest) as? [Entity] {
@@ -46,5 +50,28 @@ class CDDataStore<T: NSManagedObject>: DataStore {
             return .failure(CDError.invalidManagedObjectType)
         }
         return .success(managedObject)
+    }
+    
+    func save() -> Result<Bool, Error> {
+        do {
+            try context.save()
+            return .success(true)
+        } catch {
+            context.rollback()
+            return .failure(error)
+        }
+    }
+}
+
+// Extensions for converting general predicates/sorts to NS
+extension Predicate {
+    func toNSPredicate() -> NSPredicate {
+        return NSPredicate(format: self.format, argumentArray: self.arguments)
+    }
+}
+
+extension SortDescriptor {
+    func toNSSortDescriptor() -> NSSortDescriptor {
+        return NSSortDescriptor(key: self.key, ascending: self.ascending)
     }
 }

@@ -11,6 +11,7 @@ import CoreData
 protocol CourseStore {
     func getCourses() -> Result<[Course], Error>
     func create(course: Course) -> Result<Course, Error>
+    func save() -> Result <Bool, Error>
 }
 
 class CDCourseStore: CourseStore {
@@ -49,5 +50,9 @@ class CDCourseStore: CourseStore {
         case .failure(let error):
             return .failure(error)
         }
+    }
+    
+    func save() -> Result<Bool, Error> {
+        return store.save()
     }
 }
