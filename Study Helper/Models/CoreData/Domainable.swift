@@ -9,6 +9,6 @@ import Foundation
 
 /// Indicates the data model can be converted to a domain model
 protocol Domainable {
-    associatedtype domainModel
-    func toDomain() -> domainModel
+    associatedtype Model: DomainModel
+    func toDomain() -> Model
 }

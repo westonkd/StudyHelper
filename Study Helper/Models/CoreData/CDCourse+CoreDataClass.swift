@@ -11,7 +11,7 @@ import CoreData
 
 
 public class CDCourse: NSManagedObject, Domainable {
-    typealias domainModel = Course
+    typealias Model = Course
     
     func toDomain() -> Course {
         return Course(
