@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol CourseStore {
-    func getCourses() -> Result<[Course], Error>
+    func all() -> Result<[Course], Error>
     func create(course: Course) -> Result<Course, Error>
     func save() -> Result <Bool, Error>
 }
@@ -21,7 +21,7 @@ class CDCourseStore: CourseStore {
         self.store = CDDataStore<CDCourse>(context: context)
     }
     
-    func getCourses() -> Result<[Course], Error> {
+    func all() -> Result<[Course], Error> {
         let result = store.get()
         switch result {
         case .success(let managedCourses):
