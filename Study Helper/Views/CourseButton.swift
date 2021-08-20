@@ -16,10 +16,11 @@ struct CourseButton: View {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading) {
                         Text(course.name)
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        Text("Button")
                             .font(.headline)
+                        Text("Button")
+                            .font(.subheadline)
                     }
+                    .frame(height: 75)
                     Spacer()
                 }
                 HStack {

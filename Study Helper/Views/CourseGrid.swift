@@ -11,7 +11,7 @@ struct CourseGrid: View {
     @Binding var courses: [Course]
     
     var columns: [GridItem] {
-      Array(repeating: .init(.adaptive(minimum: 120)), count: 2)
+        Array(repeating: .init(.flexible()), count: 2)
     }
     
     var body: some View {
@@ -21,7 +21,7 @@ struct CourseGrid: View {
                     CourseButton(course: $courses[courseIndex])
                 }
             }
-            .padding()
+            .padding(10)
         }
     }
 }
