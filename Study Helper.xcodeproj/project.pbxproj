@@ -24,6 +24,7 @@
 		ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590A26CA1307008FF305 /* CDDataStore.swift */; };
 		ADD4590E26CA1A66008FF305 /* CDCourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */; };
 		ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590F26CA1CB2008FF305 /* Domainable.swift */; };
+		ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */; };
 		ADE3747026CF585600179F47 /* CoursePreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3746F26CF585600179F47 /* CoursePreviewData.swift */; };
 		ADE3747326CF5A1100179F47 /* CourseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3747226CF5A1100179F47 /* CourseButton.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		ADD4590A26CA1307008FF305 /* CDDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataStore.swift; sourceTree = "<group>"; };
 		ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCourseStore.swift; sourceTree = "<group>"; };
 		ADD4590F26CA1CB2008FF305 /* Domainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domainable.swift; sourceTree = "<group>"; };
+		ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseGrid.swift; sourceTree = "<group>"; };
 		ADE3746F26CF585600179F47 /* CoursePreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePreviewData.swift; sourceTree = "<group>"; };
 		ADE3747226CF5A1100179F47 /* CourseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				ADE3747226CF5A1100179F47 /* CourseButton.swift */,
+				ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */,
 				ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */,
+				ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */,
 				AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */,
 				ADC8DB4226C8D8CE00472EC9 /* Course.swift in Sources */,
 				ADE3747326CF5A1100179F47 /* CourseButton.swift in Sources */,

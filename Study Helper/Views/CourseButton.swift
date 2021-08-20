@@ -12,20 +12,23 @@ struct CourseButton: View {
     
     var body: some View {
         Button(action: { print("Button action") }) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading) {
-                    Text(course.name)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    Text("Button")
-                        .font(.headline)
+            ZStack(alignment: .top) {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
+                        Text(course.name)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("Button")
+                            .font(.headline)
+                    }
+                    Spacer()
                 }
-                Spacer()
-                    .frame(width: 25)
-                Button(action: { print("more") }) {
-                    Image(systemName: "ellipsis.circle.fill")
-                        .font(.system(size: 20.0))
+                HStack {
+                    Spacer()
+                    Button(action: { print("more") }) {
+                        Image(systemName: "ellipsis.circle.fill")
+                            .font(.system(size: 20.0))
+                    }
                 }
-                .padding(.top, 5)
             }
         }
         .padding(10)
