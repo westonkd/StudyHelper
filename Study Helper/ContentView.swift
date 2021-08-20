@@ -12,7 +12,7 @@ struct ContentView: View {
     private var viewContext
     
     var body: some View {
-        Text("Hello, world!")
+        CourseGrid(courses: .constant(Course.PreviewData()))
             .padding()
             .onAppear {
                 // Test: Create a course
