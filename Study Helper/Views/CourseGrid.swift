@@ -9,16 +9,22 @@ import SwiftUI
 
 struct CourseGrid: View {
     @Binding var courses: [Course]
+    @Binding var activeCourseId: String
     
-    var columns: [GridItem] {
-        Array(repeating: .init(.flexible()), count: 2)
-    }
+    let columns: [GridItem] = [
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible()),
+    ]
+
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(0..<courses.count) { courseIndex in
-                    CourseButton(course: $courses[courseIndex])
+                    CourseButton(
+                        course: $courses[courseIndex],
+                        activeCourseId: $activeCourseId
+                    )
                 }
             }
             .padding(10)
@@ -28,6 +34,10 @@ struct CourseGrid: View {
 
 struct CourseGrid_Previews: PreviewProvider {
     static var previews: some View {
-        CourseGrid(courses: .constant(Course.PreviewData()))
+        CourseGrid(
+            courses: .constant(Course.PreviewData()),
+            activeCourseId: .constant("2")
+        )
+        .preferredColorScheme(.light)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1F4A9926D0250800AD614E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F4A9826D0250800AD614E /* Color.swift */; };
 		AD20825E26C70CF500FCC648 /* Study_HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20825D26C70CF500FCC648 /* Study_HelperApp.swift */; };
 		AD20826026C70CF500FCC648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20825F26C70CF500FCC648 /* ContentView.swift */; };
 		AD20826226C70CF600FCC648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD20826126C70CF600FCC648 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD1F4A9826D0250800AD614E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AD20825A26C70CF500FCC648 /* Study Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD20825D26C70CF500FCC648 /* Study_HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_HelperApp.swift; sourceTree = "<group>"; };
 		AD20825F26C70CF500FCC648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				AD20826126C70CF600FCC648 /* Assets.xcassets */,
 				AD20826626C70CF600FCC648 /* Info.plist */,
 				AD258E2926C8A7DD00FE58B5 /* Persitence.swift */,
+				AD1F4A9826D0250800AD614E /* Color.swift */,
 			);
 			path = "Study Helper";
 			sourceTree = "<group>";
@@ -228,6 +231,8 @@
 			dependencies = (
 			);
 			name = "Study Helper";
+			packageProductDependencies = (
+			);
 			productName = "Study Helper";
 			productReference = AD20825A26C70CF500FCC648 /* Study Helper.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +304,8 @@
 				Base,
 			);
 			mainGroup = AD20825126C70CF500FCC648;
+			packageReferences = (
+			);
 			productRefGroup = AD20825B26C70CF500FCC648 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,6 +352,7 @@
 				ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */,
 				ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */,
 				AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */,
+				AD1F4A9926D0250800AD614E /* Color.swift in Sources */,
 				ADC8DB4226C8D8CE00472EC9 /* Course.swift in Sources */,
 				ADE3747326CF5A1100179F47 /* CourseButton.swift in Sources */,
 				AD38C30C26C8DA7D00A7CA12 /* CDEvent+CoreDataClass.swift in Sources */,

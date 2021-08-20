@@ -13,7 +13,7 @@ extension Course {
             Course(
                 id: "1",
                 name: "Computer Security",
-                courseColor: "#FFF",
+                courseColor: "#9999ff",
                 courseImage: URL(string: "https://via.placeholder.com/150"),
                 totalSeconds: 120.1
             ),
@@ -41,7 +41,7 @@ extension Course {
             Course(
                 id: "5",
                 name: "Course with a really, really long name!!!!!!!!!!!",
-                courseColor: "#221A71",
+                courseColor: "#40e0d0",
                 courseImage: URL(string: "https://via.placeholder.com/150"),
                 totalSeconds: 420.1
             )
