@@ -52,7 +52,7 @@ class CDDataStore<T: NSManagedObject>: DataStore {
         return .success(managedObject)
     }
     
-    func save() -> Result<Bool, Error> {
+    @discardableResult func save() -> Result<Bool, Error> {
         do {
             try context.save()
             return .success(true)
