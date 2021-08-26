@@ -9,10 +9,19 @@ import SwiftUI
 
 struct CourseButton: View {
     @Binding var course: Course
-    @Binding var activeCourseId: String
+    @Binding var activeCourse: Course?
+    
+    var onPress: (_ c: Course) -> Void
+    var isActiveCourse: Bool {
+        guard let c = activeCourse else {
+            return false
+        }
+        
+        return c.id == course.id
+    }
     
     var body: some View {
-        Button(action: { print("Start/Stop Course Timer") }) {
+        Button(action: { print("start/stop timer") }) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text(course.name)
@@ -24,7 +33,7 @@ struct CourseButton: View {
                         .padding(.top, 5)
                 }
                 Spacer()
-                Button(action: { print("Detailed Course Viw") }) {
+                Button(action: { onPress(course) }) {
                     Image(systemName: "ellipsis.circle.fill")
                         .font(.system(size: 20.0))
                 }
@@ -37,7 +46,7 @@ struct CourseButton: View {
         .background(Color.init(hex: course.courseColor))
         .cornerRadius(10)
         .overlay(
-            course.id == activeCourseId ? RoundedRectangle(cornerRadius: 10)
+            isActiveCourse ? RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(.label), lineWidth: 3) : nil
         )
     }
@@ -46,8 +55,11 @@ struct CourseButton: View {
 struct CourseButton_Previews: PreviewProvider {
     static var previews: some View {
         CourseButton(
-            course: .constant(Course.PreviewData()[4]),
-            activeCourseId: .constant("2")
+            course: .constant(Course.PreviewData()[0]),
+            activeCourse: .constant(Course.PreviewData()[1]),
+            onPress: { (c: Course) -> Void in
+                print("Clicked \(c.name)")
+            }
         )
     }
 }

@@ -21,6 +21,7 @@
 		AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38C31026C8DAA100A7CA12 /* Event.swift */; };
 		AD822B3126CD80E3009DDA15 /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD822B3026CD80E3009DDA15 /* DomainModel.swift */; };
 		ADC8DB4226C8D8CE00472EC9 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8DB4126C8D8CE00472EC9 /* Course.swift */; };
+		ADD43E1C26D74C640048F367 /* CourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD43E1B26D74C640048F367 /* CourseDetails.swift */; };
 		ADD4590926CA1250008FF305 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590826CA1250008FF305 /* DataStore.swift */; };
 		ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590A26CA1307008FF305 /* CDDataStore.swift */; };
 		ADD4590E26CA1A66008FF305 /* CDCourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */; };
@@ -68,6 +69,7 @@
 		AD38C31026C8DAA100A7CA12 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AD822B3026CD80E3009DDA15 /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
 		ADC8DB4126C8D8CE00472EC9 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		ADD43E1B26D74C640048F367 /* CourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetails.swift; sourceTree = "<group>"; };
 		ADD4590826CA1250008FF305 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		ADD4590A26CA1307008FF305 /* CDDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataStore.swift; sourceTree = "<group>"; };
 		ADD4590D26CA1A66008FF305 /* CDCourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCourseStore.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				ADE3747226CF5A1100179F47 /* CourseButton.swift */,
 				ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */,
+				ADD43E1B26D74C640048F367 /* CourseDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */,
 				ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */,
+				ADD43E1C26D74C640048F367 /* CourseDetails.swift in Sources */,
 				ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */,
 				AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */,
 				AD1F4A9926D0250800AD614E /* Color.swift in Sources */,
