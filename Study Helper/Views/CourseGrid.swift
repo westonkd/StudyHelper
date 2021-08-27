@@ -12,15 +12,16 @@ struct CourseGrid: View {
     @Binding var activeCourseId: String
     
     @State private var action: Int? = 0
-    
-    // The course currently being timed
-    @State var activeCourse: Course?
-    
-    // The cousre being inspected
     @State var inspectedCourse: Course?
-    
-    // Indicates if the user is inspecting a course
     @State var isInspecting: Bool? = false
+    
+    var inspectingActiveCourse: Bool {
+        guard let inspected = inspectedCourse else {
+            return false
+        }
+        
+        return activeCourseId == inspected.id
+    }
     
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),
@@ -30,7 +31,14 @@ struct CourseGrid: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                NavigationLink(destination: CourseDetails(course: $inspectedCourse), tag: true, selection: $isInspecting) {
+                NavigationLink(
+                    destination: CourseDetails(
+                        course: $inspectedCourse,
+                        running: .constant(inspectingActiveCourse)
+                    ),
+                    tag: true,
+                    selection: $isInspecting
+                ) {
                     EmptyView()
                 }
                 
@@ -38,7 +46,7 @@ struct CourseGrid: View {
                     ForEach(0..<courses.count) { courseIndex in
                         CourseButton(
                             course: $courses[courseIndex],
-                            activeCourse: $activeCourse,
+                            isActiveCourse: courses[courseIndex].id == activeCourseId,
                             onPress: { (c: Course) -> Void in
                                 inspectedCourse = c
                                 isInspecting = true

@@ -9,16 +9,9 @@ import SwiftUI
 
 struct CourseButton: View {
     @Binding var course: Course
-    @Binding var activeCourse: Course?
-    
+
+    var isActiveCourse: Bool
     var onPress: (_ c: Course) -> Void
-    var isActiveCourse: Bool {
-        guard let c = activeCourse else {
-            return false
-        }
-        
-        return c.id == course.id
-    }
     
     var body: some View {
         Button(action: { print("start/stop timer") }) {
@@ -26,8 +19,6 @@ struct CourseButton: View {
                 VStack(alignment: .leading) {
                     Text(course.name)
                         .font(.headline)
-                    // How long the current timer has been running.
-                    // What should it be if no timer is running for the course?
                     Text("00:12:20")
                         .font(.subheadline)
                         .padding(.top, 5)
@@ -56,7 +47,7 @@ struct CourseButton_Previews: PreviewProvider {
     static var previews: some View {
         CourseButton(
             course: .constant(Course.PreviewData()[0]),
-            activeCourse: .constant(Course.PreviewData()[1]),
+            isActiveCourse: false,
             onPress: { (c: Course) -> Void in
                 print("Clicked \(c.name)")
             }

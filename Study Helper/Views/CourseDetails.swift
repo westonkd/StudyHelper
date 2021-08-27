@@ -9,10 +9,24 @@ import SwiftUI
 
 struct CourseDetails: View {
     @Binding var course: Course?
+    @Binding var running: Bool
+    
+    var iconName: String {
+        return running ? "pause.circle.fill" : "play.circle.fill"
+    }
     
     var body: some View {
-        HStack {
-            Text("Course details here")
+        VStack {
+            Button(action: {}) {
+                Image(systemName: iconName)
+                    .font(.system(size: 100.0))
+            }
+            
+            if running {
+                Text("00:00:00")
+                    .font(.system(size: 35))
+                    .padding(.top, 20)
+            }
         }
         .navigationTitle(course?.name ?? "")
     }
@@ -20,6 +34,9 @@ struct CourseDetails: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseDetails(course: .constant(Course.PreviewData()[1]))
+        CourseDetails(
+            course: .constant(Course.PreviewData()[1]),
+            running: .constant(false)
+        )
     }
 }
