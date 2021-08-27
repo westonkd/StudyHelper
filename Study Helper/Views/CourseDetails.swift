@@ -27,6 +27,11 @@ struct CourseDetails: View {
                     .font(.system(size: 35))
                     .padding(.top, 20)
             }
+            
+            VStack {
+                Divider()
+                Text("Course Event List. Users should be able to swipe up on this to see taller list list")
+            }
         }
         .navigationTitle(course?.name ?? "")
     }
