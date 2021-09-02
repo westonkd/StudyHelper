@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext)
+    private var viewContext
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                // Test: Create a course
+                Course(id: "1", name: "test", courseColor: "blue", courseImage: URL(string: "https://www.test.com"), totalSeconds: 22.3).save()
+                
+                // Test: Fetch all courses
+                print(Course.all())
+            }
     }
 }
 

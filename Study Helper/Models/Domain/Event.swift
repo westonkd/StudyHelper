@@ -2,7 +2,7 @@
 //  Event.swift
 //  Study Helper
 //
-//  Created by Weston Dransfield on 8/13/21.
+//  Created by Weston Dransfield on 8/14/21.
 //
 
 import Foundation

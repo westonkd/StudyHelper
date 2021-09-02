@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCourse" representedClassName=".CDCourse" syncable="YES" codeGenerationType="category">
+        <attribute name="courseColor" attributeType="String"/>
+        <attribute name="courseImage" attributeType="URI"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="totalSeconds" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDEvent" inverseName="course" inverseEntity="CDEvent"/>
+    </entity>
+    <entity name="CDEvent" representedClassName=".CDEvent" syncable="YES" codeGenerationType="category">
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO" customClassName="Course"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCourse" inverseName="events" inverseEntity="CDCourse"/>
+    </entity>
+    <elements>
+        <element name="CDCourse" positionX="-63" positionY="-9" width="128" height="119"/>
+        <element name="CDEvent" positionX="-54" positionY="-9" width="128" height="89"/>
+    </elements>
+</model>
