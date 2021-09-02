@@ -52,7 +52,7 @@ class CDCourseStore: CourseStore {
         }
     }
     
-    func save() -> Result<Bool, Error> {
+    @discardableResult func save() -> Result<Bool, Error> {
         return store.save()
     }
 }

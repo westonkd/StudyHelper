@@ -30,7 +30,7 @@ struct Course: DomainModel {
         return []
     }
     
-    func save() -> Bool {
+    @discardableResult func save() -> Bool {
         let courseStore = CDCourseStore(context: PersistenceController.shared.container.viewContext)
         
         // TODO: if the course exists, just update it
