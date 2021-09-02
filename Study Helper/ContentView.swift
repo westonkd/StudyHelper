@@ -16,14 +16,19 @@ struct ContentView: View {
             courses: .constant(Course.PreviewData()),
             activeCourseId: .constant("2")
         )
-            .padding()
-            .onAppear {
-                // Test: Create a course
-                Course(id: "1", name: "test", courseColor: "blue", courseImage: URL(string: "https://www.test.com"), totalSeconds: 22.3).save()
-                
-                // Test: Fetch all courses
-                print(Course.all())
-            }
+        .onAppear {
+            // Test: Create a course
+            Course(
+                id: "1",
+                name: "test",
+                courseColor: "blue",
+                courseImage: URL(string: "https://www.test.com"),
+                totalSeconds: 22.3
+            ).save()
+            
+            // Test: Fetch all courses
+            print(Course.all())
+        }
     }
 }
 

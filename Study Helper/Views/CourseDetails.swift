@@ -29,6 +29,7 @@ struct CourseDetails: View {
             }
             
             VStack {
+                Spacer().frame(maxHeight: 150)
                 Divider()
                 Text("Course Event List. Users should be able to swipe up on this to see taller list list")
             }

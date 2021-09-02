@@ -25,7 +25,7 @@ struct CourseGrid: View {
     
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     var body: some View {
