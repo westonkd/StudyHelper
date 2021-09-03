@@ -29,6 +29,8 @@
 		ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */; };
 		ADE3747026CF585600179F47 /* CoursePreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3746F26CF585600179F47 /* CoursePreviewData.swift */; };
 		ADE3747326CF5A1100179F47 /* CourseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3747226CF5A1100179F47 /* CourseButton.swift */; };
+		B1FA28FA26E188A100FC0D1E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA28F926E188A100FC0D1E /* API.swift */; };
+		B1FA28FC26E1897000FC0D1E /* CanvasAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA28FB26E1897000FC0D1E /* CanvasAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		ADD5FE1626CF63EC0041EC86 /* CourseGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseGrid.swift; sourceTree = "<group>"; };
 		ADE3746F26CF585600179F47 /* CoursePreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePreviewData.swift; sourceTree = "<group>"; };
 		ADE3747226CF5A1100179F47 /* CourseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseButton.swift; sourceTree = "<group>"; };
+		B1FA28F926E188A100FC0D1E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B1FA28FB26E1897000FC0D1E /* CanvasAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		AD20825C26C70CF500FCC648 /* Study Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B1FA28F826E1886700FC0D1E /* API */,
 				ADE3747126CF59F600179F47 /* Views */,
 				ADD4590C26CA193B008FF305 /* Stores */,
 				AD20828926C711E000FCC648 /* Models */,
@@ -216,6 +221,15 @@
 				ADD43E1B26D74C640048F367 /* CourseDetails.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B1FA28F826E1886700FC0D1E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B1FA28F926E188A100FC0D1E /* API.swift */,
+				B1FA28FB26E1897000FC0D1E /* CanvasAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,8 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD4590B26CA1307008FF305 /* CDDataStore.swift in Sources */,
+				B1FA28FA26E188A100FC0D1E /* API.swift in Sources */,
 				ADD4591026CA1CB2008FF305 /* Domainable.swift in Sources */,
 				ADD43E1C26D74C640048F367 /* CourseDetails.swift in Sources */,
+				B1FA28FC26E1897000FC0D1E /* CanvasAPI.swift in Sources */,
 				ADD5FE1726CF63EC0041EC86 /* CourseGrid.swift in Sources */,
 				AD38C31126C8DAA100A7CA12 /* Event.swift in Sources */,
 				AD1F4A9926D0250800AD614E /* Color.swift in Sources */,

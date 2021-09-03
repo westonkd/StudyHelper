@@ -15,7 +15,15 @@ struct Course: DomainModel {
     let courseColor: String
     let courseImage: URL?
     let totalSeconds: Double
-    
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case courseColor = "course_color"
+        case courseImage = "course_image"
+        case totalSeconds
+    }
+
     static func all() -> [Course] {
         let courseStore = CDCourseStore(context: PersistenceController.shared.container.viewContext)
         let result = courseStore.all()

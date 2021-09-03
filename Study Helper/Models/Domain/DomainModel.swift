@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-protocol DomainModel {
+protocol DomainModel: Decodable {
     associatedtype Model: DomainModel
     
     static func PreviewData() -> [Model]
