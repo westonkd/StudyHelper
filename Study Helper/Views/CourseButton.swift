@@ -44,7 +44,7 @@ struct CourseButton: View {
                     }
                 }
                 .gesture(DragGesture(minimumDistance: 0.0)
-                            .onChanged { _ in withAnimation(.easeOut(duration: 0.2)) { scaleValue = 1.05 } }
+                            .onChanged { _ in withAnimation(.easeOut(duration: 0.2)) { scaleValue = 0.95 } }
                             .onEnded { _ in withAnimation(.easeIn(duration: 0.2)) {scaleValue = 1} })
             }
             .padding(10)
